@@ -231,6 +231,7 @@ header {
 .feature-item {
   width: 270px;
 }
+
 .feature p {
   margin-top: 0;
   margin-bottom: 0;
@@ -245,6 +246,26 @@ header {
 
   margin-top: 0;
   margin-bottom: 10px;
+}
+.astronaut,
+.diagram,
+.clock,
+.antenna {
+  text-align: center;
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+.icon-astronaut,
+.icon-diagram,
+.icon-clock,
+.icon-antenna {
+  width: 70px;
+  height: 70px;
 }
 /******work********/
 
