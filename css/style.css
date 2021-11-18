@@ -337,10 +337,18 @@ img {
 .icon-svg {
   fill: currentColor;
 }
+.icon-link:hover
+,icon-link:focus {
+  color: var(--primary-white-color);
+}
+.icon-svg:hover,
+.icon-svg:focus {
+  fill: currentColor;
+}
 .icons-item:hover,
 .icons-item:focus {
   background-color: var(--acent-color);
-}
+  }
 /********clients********/
 .clients {
   display: flex;
@@ -357,13 +365,13 @@ img {
 .clients-item:hover {
   border: 1px solid var(--acent-color);
 }
+
 .clients-item:not(:last-child) {
   margin-right: 30px;
 }
 .clients-item.company1 {
   padding: 23px 65px;
-  fill: currentColor;
-}
+  }
 .clients-item.company2 {
   padding: 20px 65px;
 }
@@ -382,7 +390,12 @@ img {
 .clients-item.company6 {
   padding: 23px 38px;
 }
-
+.client-company{
+  color: #AFB1B8;
+}
+.client {
+  fill: currentColor;
+}
 .client:hover,
 .client:focus {
   fill: var(--acent-color);
