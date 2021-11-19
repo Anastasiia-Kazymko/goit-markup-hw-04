@@ -88,6 +88,8 @@ header {
   margin-left: auto;
 }
 .contacts-nav-link {
+  display: flex;
+  align-items: center;
   color: var(--primery-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -251,13 +253,13 @@ header {
 .diagram,
 .clock,
 .antenna {
-  text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  padding: 25px 100px;
   margin-bottom: 30px;
 }
 .icon-astronaut,
@@ -320,35 +322,37 @@ img {
 }
 .icons {
   display: flex;
-  width: 206px;
-  margin: 16px 32px 0px;
+  justify-content: center;
+  margin-top: 16px;
 }
-
+.icon:not(:last-child) {
+  margin-right: 10px;
+}
 .icons-item {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  align-content: center;
-  padding: 12px;
 }
 .icon-link {
   color: #afb1b8;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 .icon-svg {
   fill: currentColor;
 }
-.icon-link:hover
-,icon-link:focus {
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--acent-color);
   color: var(--primary-white-color);
 }
 .icon-svg:hover,
 .icon-svg:focus {
   fill: currentColor;
 }
-.icons-item:hover,
-.icons-item:focus {
-  background-color: var(--acent-color);
-  }
 /********clients********/
 .clients {
   display: flex;
@@ -356,49 +360,28 @@ img {
 .clients-item {
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-  color: #afb1b8;
 }
-.clients-item:focus,
-.clients-item:hover {
-  border: 1px solid var(--acent-color);
-}
-
 .clients-item:not(:last-child) {
   margin-right: 30px;
 }
-.clients-item.company1 {
-  padding: 23px 65px;
-  }
-.clients-item.company2 {
-  padding: 20px 65px;
-}
-.clients-item.company3 {
-  padding: 25px 63px;
-}
-.clients-item.company4 {
-  padding: 25px 43px;
-}
-.clients-item.company4 {
-  padding: 22px 53px;
-}
-.clients-item.company5 {
-  padding: 23px 53px;
-}
-.clients-item.company6 {
-  padding: 23px 38px;
-}
-.client-company{
-  color: #AFB1B8;
+
+.client-company {
+  color: #afb1b8;
+  display: flex;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .client {
   fill: currentColor;
 }
-.client:hover,
-.client:focus {
-  fill: var(--acent-color);
+.client-company:hover,
+.client-company:focus {
+  color: var(--acent-color);
+  border: 1px solid var(--acent-color);
 }
 /*******footer*******/
 .list-address {
@@ -429,8 +412,10 @@ footer {
 /*******************ADD**********/
 .container-footer {
   display: flex;
+  align-items: baseline;
 }
 .add-title {
+  margin-top: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -447,19 +432,23 @@ footer {
 .icons-add {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.1);
 }
 .icons-add:not(:last-child) {
   margin-right: 10px;
 }
-.icons-add:hover,
-.icons-add:focus {
+.add-link:hover,
+.add-link:focus {
   background-color: var(--acent-color);
 }
 .add-link {
   color: var(--primary-white-color);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 .add-svg {
   fill: currentColor;
@@ -468,7 +457,7 @@ footer {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  }
+}
 
 .projects-item {
   width: 370px;
@@ -481,11 +470,15 @@ footer {
 .projects-item:nth-child(3n) {
   margin-right: 0;
 }
-.projects-item:focus,
-.projects-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.projects-link {
+  display: block;
 }
-  .projects-title {
+.projects-link:focus,
+.projects-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects-title {
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -501,13 +494,12 @@ footer {
   margin-bottom: 4px;
 }
 
-
-}
 .projects-service {
+  color: var(--primery-text-color);
   font-size: 16px;
   line-height: 1.9;
-  color: var(--primery-text-color);
   margin-top: 0;
+  letter-spacing: 0.03em;
 }
 .services {
   margin-bottom: 50px;
@@ -524,4 +516,5 @@ footer {
   background-color: var(--acent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
